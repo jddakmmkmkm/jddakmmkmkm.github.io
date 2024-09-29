@@ -15,7 +15,7 @@ head: [
     logo: 'https://images.mcsl.com.cn/laughing.png',
     hostname: "https://lz.mcsl.com.cn",
     autoFrontmatter: false,
-    footer: { message: "<a target='_blank' href='https://beian.miit.gov.cn/'>文田垃圾场</a></br>本站由 木韩网络 提供 CDN 加速与防御支持。", "copyright": "© 2022-2024 <a href='https://mcsl.com.cn'>MCSL开发组</a> 保留所有权利。" },
+    footer: { message: "<a target='_blank' href='https://beian.miit.gov.cn/'>文田垃圾场</a></br>李玉州我冯了个福", "copyright": "© 2022-2024 <a href='https://mcsl.com.cn'>文田垃圾场</a> 保留所有权利。" },
     navbar: [
       {
         text: '主页',
