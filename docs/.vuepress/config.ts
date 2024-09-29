@@ -3,60 +3,60 @@ import { defineUserConfig } from 'vuepress'
 import { plumeTheme } from 'vuepress-theme-plume'
 
 export default defineUserConfig({
-[
-  ['link'{ rel'icon'type'image/png'href'https://images.mcsl.com.cn/laughing.png' }]
- ]
-'zh-CN'
-"文田垃圾场"
-'记录遇到的大大小小笑料，享受美好生活 | MCSL 开发组强势驱动'
-  themeplumeTheme({
+head: [
+  ['link', { rel: 'icon', type: 'image/png', href: 'https://images.mcsl.com.cn/laughing.png' }]
+ ],
+  lang: 'zh-CN',
+  title: "文田垃圾场",
+  description: '记录遇到的大大小小笑料，享受美好生活 | MCSL 开发组强势驱动',
+  theme: plumeTheme({
     // more...
-    blogfalse
-    'https://images.mcsl.com.cn/laughing.png'
-"https://lz.mcsl.com.cn"
-    autoFrontmatterfalse
-{"<a target='_blank' href='fun.amxosi.icu'>文田垃圾场</a></br>李玉州我冯了个福""copyright""© 2022-2024 <a href='https://fun.amxosi.icu'>文田垃圾场</a> 保留所有权利。" }
-[
+    blog: false,
+    logo: 'https://images.mcsl.com.cn/laughing.png',
+    hostname: "https://lz.mcsl.com.cn",
+    autoFrontmatter: false,
+    footer: { message: "<a target='_blank' href='https://beian.miit.gov.cn/'>鲁ICP备2023001164号-2</a></br>本站由 木韩网络 提供 CDN 加速与防御支持。", "copyright": "© 2022-2024 <a href='https://mcsl.com.cn'>MCSL开发组</a> 保留所有权利。" },
+    navbar: [
       {
-        text
-'/'
-'heroicons:home'
-      }
+        text: '主页',
+        link: '/',
+        icon: 'heroicons:home',
+      },
       {
-'垃圾场目录'
-'/arts/'
-'ic:round-list'
-      }
+        text: '垃圾场目录',
+        link: '/arts/',
+        icon: 'ic:round-list',
+      },
       {
-'投稿须知'
-'/eula'
-'f7:doc-text-fill'
-      }
+        text: '投稿须知',
+        link: '/eula',
+        icon: 'f7:doc-text-fill',
+      },
       {
-'进入仓库'
-'https://github.com/MCSLTeam/YourWholeFamilyIsInThe.Icu'
-'mdi:github'
-      }
-    ]
-{
+        text: '进入仓库',
+        link: 'https://github.com/MCSLTeam/YourWholeFamilyIsInThe.Icu',
+        icon: 'mdi:github',
+      },
+    ],
+    plugins: {
       // watermark: true,
-{
+      watermark: {
         // enabled: false,  // boolean 类型控制是否全局启用
-// function 类型 过滤哪些页面启用水印
-0// 添加水印的延时。以毫秒为单位。
+        enabled: page => true, // function 类型 过滤哪些页面启用水印
+        delay: 0, // 添加水印的延时。以毫秒为单位。
 
         /**
          * 是否全屏水印，默认为 `true`，
          * 设置为 `false` 时，水印仅在 内容区域中显示。
          */
-true
+        fullPage: true,
 
-{
-'文田中学-wt.amxosi.icu版权所有'
+        watermarkOptions: {
+          content: '文田中学-wt.amxosi.icu版权所有',
           // ...
         }
       }
     }
-  })
-viteBundler()
+  }),
+  bundler: viteBundler(),
 })
