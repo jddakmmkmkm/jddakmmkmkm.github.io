@@ -34,7 +34,7 @@ head: [
       },
       {
         text: '进入仓库',
-        link: 'https://github.com/MCSLTeam/YourWholeFamilyIsInThe.Icu',
+        link: '/404',
         icon: 'mdi:github',
       },
     ],
