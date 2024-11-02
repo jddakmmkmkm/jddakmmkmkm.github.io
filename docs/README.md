@@ -26,7 +26,7 @@ config:
       -
         title: 什么都能评
         icon: 🤣
-        details: 不怕b事多，就怕不够写。
+        details: 啥都锐评
   -
     type: custom
 ---
